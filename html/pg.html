@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <title>PlayGround</title>
+</head>
+<style>
+    body{
+        background-color:aliceblue;
+    }
+</style>
+<body>
+    <div class="m-4">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a href="../index.html" class="navbar-brand"><h1 style="font-size: 40px;">Cricket Spirit</h1></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="../index.html" class="nav-item nav-link "><div style="font-size: 30px;">Home</div> </a>
+                        <a href="../html/rule.html" class="nav-item nav-link"><div style="font-size: 30px;">Rules</div></a>
+                        <a href="#" class="nav-item nav-link"><div style="font-size: 30px;">PlayGround</div></a>
+                        <a href="../html/result.html" class="nav-item nav-link active"><div style="font-size: 25px; ">Results</div></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- <div class="card" style="margin-top: 8em;">
+
+
+        <!-- <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 class=""style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,rgb(62, 62, 226),orange,blue);color: blue;text-shadow: 1px 1px gold;border-radius: 7px;">
+                    DC Vs MI 
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 2
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="demo" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: aliceblue; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2 ">
+                    <a href="matches/mh2.html" class="btn btn-primary" aria-disabled="true">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,black,red,black);color: yellow;text-shadow: 1px 1px black;border-radius: 7px;">
+                    PBKS Vs RCB 
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 3
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="demo2" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: aliceblue; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh3.html" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div> -->
+        <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,rgb(62, 62, 226),aqua,blue);color: blue;text-shadow: 1px 1px gold;border-radius: 7px;">
+                    RCB Vs KKR
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 6
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="demo2" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: aliceblue; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh4.html" id="link" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("March 30, 2022 19:30:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get today's date and time
+              var now = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+            
+              // If the count down is finished, write some text
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo2").innerHTML = "STARTED";
+                document.getElementById("link").remove()
+
+              }
+            }, 1000);
+            </script>
+</body>
+</html>
