@@ -168,6 +168,50 @@
             </div>
         </div>
 
+        <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,red,skyblue,skyblue,red);color: gold;text-shadow: 1px 1px blue;border-radius: 7px;">
+                    PBKS Vs GT
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 16
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="PG" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: gold; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh12.html" id="link_PG" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,red,skyblue,skyblue,red);color: gold;text-shadow: 1px 1px blue;border-radius: 7px;">
+                    CSK Vs SRH
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 17
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="CS" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: gold; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh13.html" id="link_CS" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -332,7 +376,67 @@
             }, 1000);
 
             // ------------------------------
+            // Set the date we're counting down to
+            var countDownDate6 = new Date("April 8, 2022 19:30:00").getTime();
+            
+            // Update the count down every 1 second
+            var x6 = setInterval(function() {
+            
+              // Get today's date and time
+              var now6 = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance6 = countDownDate6 - now6;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days6 = Math.floor(distance6 / (1000 * 60 * 60 * 24));
+              var hours6 = Math.floor((distance6 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes6 = Math.floor((distance6 % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds6 = Math.floor((distance6 % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("PG").innerHTML = days6 + "d " + hours6 + "h "
+              + minutes6 + "m " + seconds6 + "s ";
+            
+              // If the count down is finished, write some text
+              if (distance6 < 0) {
+                clearInterval(x);
+                document.getElementById("PG").innerHTML = "STARTED";
+                document.getElementById("link_PG").remove()
 
+              }
+            }, 1000);
+            // ----------------------------------------
+            // Set the date we're counting down to
+            var countDownDate7 = new Date("April 9, 2022 15:30:00").getTime();
+            
+            // Update the count down every 1 second
+            var x7 = setInterval(function() {
+            
+              // Get today's date and time
+              var now7 = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance7 = countDownDate7 - now7;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days7 = Math.floor(distance7 / (1000 * 60 * 60 * 24));
+              var hours7 = Math.floor((distance7 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes7 = Math.floor((distance7 % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds7 = Math.floor((distance7 % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("CS").innerHTML = days7 + "d " + hours7 + "h "
+              + minutes7 + "m " + seconds7 + "s ";
+            
+              // If the count down is finished, write some text
+              if (distance7 < 0) {
+                clearInterval(x);
+                document.getElementById("CS").innerHTML = "STARTED";
+                document.getElementById("link_CS").remove()
+
+              }
+            }, 1000);
             </script>
 </body>
 </html>
