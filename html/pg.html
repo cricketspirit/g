@@ -37,7 +37,7 @@
 
 
 
-        <div class="card" style="margin-top: 8em;">
+        <!-- <div class="card" style="margin-top: 8em;">
             <center>
                 <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,rgb(71, 15, 134),rgb(255, 81, 0),rgb(71, 15, 134));color: gold;text-shadow: 1px 1px blue;border-radius: 7px;">
                     PBKS Vs KKR
@@ -57,7 +57,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="card" style="margin-top: 8em;">
             <center>
@@ -146,6 +146,28 @@
             </div>
         </div>
 
+        <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,aqua,blue,aqua);color: gold;text-shadow: 1px 1px blue;border-radius: 7px;">
+                    LSG Vs DC
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 15
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="LD" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: gold; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh11.html" id="link_LD" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -186,7 +208,7 @@
 
 
             // Set the date we're counting down to
-            var countDownDate2 = new Date("April 1, 2022 19:30:00").getTime();
+            var countDownDate2 = new Date("April 7, 2022 19:30:00").getTime();
             
             // Update the count down every 1 second
             var x2 = setInterval(function() {
@@ -204,14 +226,14 @@
               var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
             
               // Display the result in the element with id="demo"
-              document.getElementById("demo3").innerHTML = days2 + "d " + hours2 + "h "
+              document.getElementById("LD").innerHTML = days2 + "d " + hours2 + "h "
               + minutes2 + "m " + seconds2 + "s ";
             
               // If the count down is finished, write some text
               if (distance2 < 0) {
                 clearInterval(x);
-                document.getElementById("demo3").innerHTML = "STARTED";
-                document.getElementById("link2").remove()
+                document.getElementById("LD").innerHTML = "STARTED";
+                document.getElementById("link_LD").remove()
 
               }
             }, 1000);
@@ -308,6 +330,9 @@
 
               }
             }, 1000);
+
+            // ------------------------------
+
             </script>
 </body>
 </html>
