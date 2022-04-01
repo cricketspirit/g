@@ -1,0 +1,2996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayGround</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        .options{
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="m-4">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand"><h1 style="font-size: 40px;">Cricket Spirit</h1></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="../index.html" class="nav-item nav-link"><div style="font-size: 30px;">Home</div></a>
+                        <a href="../html/rule.html" class="nav-item nav-link "><div style="font-size: 30px;">Rules</div></a>
+                        <a href="../html/pg.html" class="nav-item nav-link active"><div style="font-size: 25px;">PlayGround</div></a>
+                        <!-- <a href="../html/result.html" class="nav-item nav-link"><div style="font-size: 30px;">Results</div></a> -->
+                    </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+<!-- <div style="background-color: aliceblue;">
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <center>
+        <h1 style="color: aliceblue;margin-top: 2.5em; font-size: 40px;">
+            MI Vs KKR 
+        </h1>
+    </center>
+    <div class="fixed-top" style="position: fixed; margin-top: 18em;">
+        <button type="button" id="tot" class="btn btn-danger" >
+            Players <span class="badge bg-light" id="player" style="color: black;">0</span>
+        </button>
+    </div>
+</div>
+
+<!-- FORM FOR TEAM SELECTION -->
+<form method="post" autocomplete="off" name="google-sheet" >
+
+
+    <div class="container-fluid" style="background-color: rgb(0, 0, 0); padding-top: 1em;padding-bottom: 1em;">
+        <div class="form-group mt-3" style="background-color: transparent;">
+            <input type="text" name="Name" class="form-control" placeholder="Name" value="" required=""/>
+        </div>
+        <div class="form-group mt-3">
+            <input type="password" name="Unicode" class="form-control" placeholder="Unicode" value="" required=""/>
+        </div>
+    </div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- team selection start -->
+<div class="accordion accordion-flush" id="accordionFlushExample"  style="margin: 15px;padding-bottom: 30px;">
+<!-- --------------------------------------------------BATSMEN----------------------------------------------------- -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Batsmen <span class="badge bg-danger" style="margin-left: 2px;" id="selected_bat" >0</span>
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+
+<!-- -----------------------------------------team 1--------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------MI Batsmen------------------------------------------------------------- -->
+<div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B14" id="B14" value="Rohit Sharma" style="height: 50px; width: 50px;" class="bat">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Rohit Sharma</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B15" id="B15" value="Suryakumar Yadav" style="height: 50px; width: 50px;" class="bat">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Suryakumar Yadav</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B16" id="B16" value="Tilak Varma" style="height: 50px; width: 50px;" class="bat">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Tilak Varma</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B17" id="B17" value="Ramandeep Singh" style="height: 50px; width: 50px;" class="bat">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Ramandeep Singh</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B18" id="B18" value="Rahul Buddhi" style="height: 50px; width: 50px;" class="bat">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Rahul Buddhi</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B19" id="B19" value="Anmolpreet Singh" style="height: 50px; width: 50px;" class="bat">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Anmolpreet Singh</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B20" id="B20" value="Dewald Brevis" style="height: 50px; width: 50px;" class="bat">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Dewald Brevis</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+<!-- -----------------------------------------team 2--------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------KKR Bat------------------------------------------------------ -->
+<div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B36" id="B36" value="Shreyas Iyer" style="height: 50px; width: 50px;" class="bat" onclick="B(6)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Shreyas Iyer</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B37" id="B37" value="Nitish Rana" style="height: 50px; width: 50px;" class="bat" onclick="B(7)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Nitish Rana</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B38" id="B38" value="Ajinkya Rahane" style="height: 50px; width: 50px;" class="bat" onclick="B(8)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Ajinkya Rahane</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B39" id="B39" value="Rinku Singh" style="height: 50px; width: 50px;" class="bat" onclick="B(9)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Rinku Singh</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B40" id="B40" value="Abhijeet Tomar" style="height: 50px; width: 50px;" class="bat" onclick="B(10)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Abhijeet Tomar</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B41" id="B41" value="Pratham Singh" style="height: 50px; width: 50px;" class="bat" onclick="B(11)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Pratham Singh</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B42" id="B42" value="Aaron Finch" style="height: 50px; width: 50px;" class="bat" onclick="B(12)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Aaron Finch</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B43" id="B43" value="Ramesh Kumar" style="height: 50px; width: 50px;" class="bat" onclick="B(13)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Ramesh Kumar</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B44" id="B44" value="Aman Khan" style="height: 50px; width: 50px;" class="bat" onclick="B(14)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Aman Khan</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="B45" id="B45" value="Baba Indrajith" style="height: 50px; width: 50px;" class="bat" onclick="B(15)">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Baba Indrajith</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+                </div>
+            </div>
+        </div>
+<!-- bat-end -->
+
+
+
+
+
+
+
+
+
+<!-- -----------------------------------------------------BOWLERS----------------------------------------------------------- -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Bowlers <span class="badge bg-danger" style="margin-left: 2px;" id="selected_bowl">0</span>
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+<!-- ----------------------------------------------------team1---------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------Mumbai Indians bowlers------------------------------------------------------------------ -->
+<div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL31" id="BL31" value="Jasprit Bumrah" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Jasprit Bumrah</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL32" id="BL32" value="Mohammad Arshad Khan" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Mohammad Arshad Khan</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL33" id="BL33" value="Jaydev Unadkat" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Jaydev Unadkat</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL34" id="BL34" value="Mayank Markande" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Mayank Markande</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" >
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL35" id="BL35" value="Jofra Archer" style="height: 50px; width: 50px;" class="bowl" disabled>
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Jofra Archer <p>(not playing)</p></p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL36" id="BL36" value="Tymal Mills" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Tymal Mills</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL37" id="BL37" value="Riley Meredith" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Riley Meredith</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL38" id="BL38" value="Murugan Ashwin" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Murugan Ashwin</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL39" id="BL39" value="Basil Thampi" style="height: 50px; width: 50px;" class="bowl">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Basil Thampi</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- ----------------------------------------------------team2---------------------------------------------------------------- -->
+<!-- --------------------------------------------------------KKR Bowl------------------------------------------------------------ -->
+<div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL680" id="BL680" value="Ashok Sharma" style="height: 50px; width: 50px;" class="bowl" onclick="kkr11()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Ashok Sharma</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL68" id="BL68" value="Varun Chakravarty" style="height: 50px; width: 50px;" class="bowl" onclick="kkr11()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Varun Chakravarty</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL69" id="BL69" value="Pat Cummins" style="height: 50px; width: 50px;" class="bowl" onclick="kkr12()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Pat Cummins</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL70" id="BL70" value="Rasikh Dar" style="height: 50px; width: 50px;" class="bowl" onclick="kkr13()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Rasikh Dar</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL71" id="BL71" value="Tim Southee" style="height: 50px; width: 50px;" class="bowl" onclick="kkr14()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Tim Southee</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL72" id="BL72" value="Umesh Yadav" style="height: 50px; width: 50px;" class="bowl" onclick="kkr15()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Umesh Yadav</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL73" id="BL73" value="Chamika Karunaratne" style="height: 50px; width: 50px;" class="bowl" onclick="kkr16()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Chamika Karunaratne</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="BL74" id="BL74" value="Shivam Mavi" style="height: 50px; width: 50px;" class="bowl" onclick="kkr17()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Shivam Mavi</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+
+                </div>
+            </div>
+        </div>
+<!-- bowl-end -->
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------Wicket Keepers-------------------------------------------------------------- -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Wicket Keepers <span class="badge bg-danger" style="margin-left: 2px;" id="selected_wk">0</span>
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+
+<!-- ----------------------------------------------------team1---------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------mi WK----------------------------------------------------------- -->
+<div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="WK9" id="WK9" value="Ishan Kishan" style="height: 50px; width: 50px;" class="wk">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Ishan Kishan</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="WK10" id="WK10" value="Aryan Juyal" style="height: 50px; width: 50px;" class="wk">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Aryan Juyal</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------team2---------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------KKR Wk----------------------------------------------------------- -->
+<div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="WK21" id="WK21" value="Sheldon Jackson" style="height: 50px; width: 50px;" class="wk" onclick="kkr18()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Sheldon Jackson</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="WK22" id="WK22" value="Sam Billings" style="height: 50px; width: 50px;" class="wk" onclick="kkr19()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Sam Billings</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+                </div>
+            </div>
+        </div>
+<!-- wk-end -->
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------ALL Rounders-------------------------------------------------------------- -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                    All Rounders <span class="badge bg-danger" style="margin-left: 2px;" id="selected_all">0</span>
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+
+
+<!-- ----------------------------------------------------team1---------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------MI ally----------------------------------------------------------- -->
+<div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL20" id="AL20" value="Kieron Pollard" style="height: 50px; width: 50px;" class="all">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Kieron Pollard</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL21" id="AL21" value="Hrithik Shokeen" style="height: 50px; width: 50px;" class="all">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Hrithik Shokeen</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL22" id="AL22" value="Arjun Tendulkar" style="height: 50px; width: 50px;" class="all">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Arjun Tendulkar</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL23" id="AL23" value="Sanjay Yadav" style="height: 50px; width: 50px;" class="all">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Sanjay Yadav</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL24" id="AL24" value="Daniel Sams" style="height: 50px; width: 50px;" class="all">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Daniel Sams</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL25" id="AL25" value="Tim David" style="height: 50px; width: 50px;" class="all">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Tim David</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background-color: blue; color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL26" id="AL26" value="Fabian Allen" style="height: 50px; width: 50px;" class="all">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Fabian Allen</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------team2---------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------KKr ALly---------------------------------------------------------- -->
+<div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL43" id="AL43" value="Andre Russell" style="height: 50px; width: 50px;" class="all" onclick="kkr20()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Andre Russell</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL44" id="AL44" value="Venkatesh Iyer" style="height: 50px; width: 50px;" class="all" onclick="kkr21()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Venkatesh Iyer</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL45" id="AL45" value="Sunil Narine" style="height: 50px; width: 50px;" class="all" onclick="kkr22()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Sunil Narine</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL46" id="AL46" value="Anukul Roy" style="height: 50px; width: 50px;" class="all" onclick="kkr23()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Anukul Roy</p>
+            </div>
+        </div>
+    </div>
+    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+        <div class="row row-cols-2 mt-2">
+            <div class="col-3">
+                <input type="checkbox" name="AL47" id="AL47" value="Mohammad Nabi" style="height: 50px; width: 50px;" class="all" onclick="kkr24()">
+            </div>
+            <div class="col">
+                <p style="font-size: 25px;">Mohammad Nabi</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- all rounders end -->
+<!-- Captain -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingfive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive" >
+                    Captain 
+                </button>
+            </h2>
+            <div id="flush-collapsefive" class="accordion-collapse collapse" aria-labelledby="flush-headingfive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <!-- mi cap -->
+                        <!-- bat -->
+                        <div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="B14" value="Rohit Sharma" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Rohit Sharma</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="B15" value="Suryakumar Yadav" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Suryakumar Yadav</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="B16" value="Tilak Varma" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Tilak Varma</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="B17" value="Ramandeep Singh" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Ramandeep Singh</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="B18" value="Rahul Buddhi" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Rahul Buddhi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="B19" value="Anmolpreet Singh" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Anmolpreet Singh</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="B20" value="Dewald Brevis" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Dewald Brevis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <!-- bowl -->
+                        <div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL31" value="Jasprit Bumrah" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Jasprit Bumrah</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL32" value="Mohammad Arshad Khan" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Mohammad Arshad Khan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL33" value="Jaydev Unadkat" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Jaydev Unadkat</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL34" value="Mayank Markande" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Mayank Markande</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL35" value="Jofra Archer" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Jofra Archer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL36" value="Tymal Mills" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Tymal Mills</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL37" value="Riley Meredith" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Riley Meredith</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL38" value="Murugan Ashwin" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Murugan Ashwin</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="BL39" value="Basil Thampi" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Basil Thampi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <!-- wk -->
+                        <div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="WK9" value="Ishan Kishan" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Ishan Kishan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="WK10" value="Aryan Juyal" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Aryan Juyal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <!-- all -->
+                        <div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="AL20" value="Kieron Pollard" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Kieron Pollard</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="AL21" value="Hrithik Shokeen" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Hrithik Shokeen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="AL22" value="Arjun Tendulkar" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Arjun Tendulkar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="AL23" value="Sanjay Yadav" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Sanjay Yadav</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="AL24" value="Daniel Sams" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Daniel Sams</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="AL25" value="Tim David" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Tim David</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container options" style="background-color: blue; color: gold;">
+                                <div class="row row-cols-2 mt-2">
+                                    <div class="col-3">
+                                        <input type="radio" name="C" id="AL26" value="Fabian Allen" style="height: 50px; width: 50px;" class="cap">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 25px;">Fabian Allen</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            <!-- kkr cap -->
+                        <!-- bat -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Shreyas Iyer" style="height: 50px; width: 50px;" class="cap" onclick="kkr1()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Shreyas Iyer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Nitish Rana" style="height: 50px; width: 50px;" class="cap" onclick="kkr2()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Nitish Rana</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Ajinkya Rahane" style="height: 50px; width: 50px;" class="cap" onclick="kkr3()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Ajinkya Rahane</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Rinku Singh" style="height: 50px; width: 50px;" class="cap" onclick="kkr4()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Rinku Singh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Abhijeet Tomar" style="height: 50px; width: 50px;" class="cap" onclick="kkr5()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Abhijeet Tomar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Pratham Singh" style="height: 50px; width: 50px;" class="cap" onclick="kkr6()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Pratham Singh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Aaron Finch" style="height: 50px; width: 50px;" class="cap" onclick="kkr7()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Aaron Finch</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Ramesh Kumar" style="height: 50px; width: 50px;" class="cap" onclick="kkr8()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Ramesh Kumar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Aman Khan" style="height: 50px; width: 50px;" class="cap" onclick="kkr9()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Aman Khan</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Baba Indrajith" style="height: 50px; width: 50px;" class="cap" onclick="kkr10()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Baba Indrajith</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!-- bowl -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Ashok Sharma" style="height: 50px; width: 50px;" class="cap" onclick="kkr11()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Ashok Sharma</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Varun Chakravarty" style="height: 50px; width: 50px;" class="cap" onclick="kkr11()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Varun Chakravarty</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Pat Cummins" style="height: 50px; width: 50px;" class="cap" onclick="kkr12()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Pat Cummins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Rasikh Dar" style="height: 50px; width: 50px;" class="cap" onclick="kkr13()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Rasikh Dar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Tim Southee" style="height: 50px; width: 50px;" class="cap" onclick="kkr14()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Tim Southee</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Umesh Yadav" style="height: 50px; width: 50px;" class="cap" onclick="kkr15()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Umesh Yadav</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Chamika Karunaratne" style="height: 50px; width: 50px;" class="cap" onclick="kkr16()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Chamika Karunaratne</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Shivam Mavi" style="height: 50px; width: 50px;" class="cap" onclick="kkr17()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Shivam Mavi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!-- wk -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Sheldon Jackson" style="height: 50px; width: 50px;" class="cap" onclick="kkr18()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Sheldon Jackson</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Sam Billings" style="height: 50px; width: 50px;" class="cap" onclick="kkr19()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Sam Billings</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                        <!-- all -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Andre Russell" style="height: 50px; width: 50px;" class="cap" onclick="kkr20()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Andre Russell</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Venkatesh Iyer" style="height: 50px; width: 50px;" class="cap" onclick="kkr21()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Venkatesh Iyer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Sunil Narine" style="height: 50px; width: 50px;" class="cap" onclick="kkr22()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Sunil Narine</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Anukul Roy" style="height: 50px; width: 50px;" class="cap" onclick="kkr23()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Anukul Roy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="C" id="C" value="Mohammad Nabi" style="height: 50px; width: 50px;" class="cap" onclick="kkr24()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Mohammad Nabi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingsix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsesix" aria-expanded="false" aria-controls="flush-collapsesix" >
+                    Vice-Captain 
+                </button>
+            </h2>
+            <div id="flush-collapsesix" class="accordion-collapse collapse" aria-labelledby="flush-headingsix" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div>
+                        <div>
+                            <!-- bat -->
+                                    <div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="B14" value="Rohit Sharma" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Rohit Sharma</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="B15" value="Suryakumar Yadav" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Suryakumar Yadav</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="B16" value="Tilak Varma" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Tilak Varma</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="B17" value="Ramandeep Singh" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Ramandeep Singh</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="B18" value="Rahul Buddhi" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Rahul Buddhi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="B19" value="Anmolpreet Singh" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Anmolpreet Singh</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="B20" value="Dewald Brevis" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Dewald Brevis</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <!-- bowl -->
+                                    <div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL31" value="Jasprit Bumrah" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Jasprit Bumrah</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL32" value="Mohammad Arshad Khan" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Mohammad Arshad Khan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL33" value="Jaydev Unadkat" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Jaydev Unadkat</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL34" value="Mayank Markande" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Mayank Markande</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL35" value="Jofra Archer" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Jofra Archer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL36" value="Tymal Mills" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Tymal Mills</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL37" value="Riley Meredith" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Riley Meredith</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL38" value="Murugan Ashwin" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Murugan Ashwin</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="BL39" value="Basil Thampi" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Basil Thampi</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <!-- wk -->
+                                    <div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="WK9" value="Ishan Kishan" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Ishan Kishan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="WK10" value="Aryan Juyal" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Aryan Juyal</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <!-- all -->
+                                    <div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="AL20" value="Kieron Pollard" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Kieron Pollard</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="AL21" value="Hrithik Shokeen" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Hrithik Shokeen</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="AL22" value="Arjun Tendulkar" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Arjun Tendulkar</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="AL23" value="Sanjay Yadav" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Sanjay Yadav</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="AL24" value="Daniel Sams" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Daniel Sams</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="AL25" value="Tim David" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Tim David</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container options" style="background-color: blue; color: gold;">
+                                            <div class="row row-cols-2 mt-2">
+                                                <div class="col-3">
+                                                    <input type="radio" name="VC" id="AL26" value="Fabian Allen" style="height: 50px; width: 50px;" class="Vc">
+                                                </div>
+                                                <div class="col">
+                                                    <p style="font-size: 25px;">Fabian Allen</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+            <!-- kkr Vcap -->
+                        <!-- bat -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C36" value="Shreyas Iyer" style="height: 50px; width: 50px;" class="Vc" onclick="kkr1()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Shreyas Iyer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C37" value="Nitish Rana" style="height: 50px; width: 50px;" class="Vc" onclick="kkr2()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Nitish Rana</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C38" value="Ajinkya Rahane" style="height: 50px; width: 50px;" class="Vc" onclick="kkr3()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Ajinkya Rahane</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C39" value="Rinku Singh" style="height: 50px; width: 50px;" class="Vc" onclick="kkr4()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Rinku Singh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C40" value="Abhijeet Tomar" style="height: 50px; width: 50px;" class="Vc" onclick="kkr5()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Abhijeet Tomar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C41" value="Pratham Singh" style="height: 50px; width: 50px;" class="Vc" onclick="kkr6()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Pratham Singh</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C42" value="Aaron Finch" style="height: 50px; width: 50px;" class="Vc" onclick="kkr7()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Aaron Finch</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C43" value="Ramesh Kumar" style="height: 50px; width: 50px;" class="Vc" onclick="kkr8()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Ramesh Kumar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C44" value="Aman Khan" style="height: 50px; width: 50px;" class="Vc" onclick="kkr9()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Aman Khan</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C45" value="Baba Indrajith" style="height: 50px; width: 50px;" class="Vc" onclick="kkr10()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Baba Indrajith</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!-- bowl -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C68" value="Ashok Sharma" style="height: 50px; width: 50px;" class="Vc" onclick="kkr11()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Ashok Sharma</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C68" value="Varun Chakravarty" style="height: 50px; width: 50px;" class="Vc" onclick="kkr11()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Varun Chakravarty</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C69" value="Pat Cummins" style="height: 50px; width: 50px;" class="Vc" onclick="kkr12()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Pat Cummins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C70" value="Rasikh Dar" style="height: 50px; width: 50px;" class="Vc" onclick="kkr13()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Rasikh Dar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C71" value="Tim Southee" style="height: 50px; width: 50px;" class="Vc" onclick="kkr14()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Tim Southee</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C72" value="Umesh Yadav" style="height: 50px; width: 50px;" class="Vc" onclick="kkr15()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Umesh Yadav</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C73" value="Chamika Karunaratne" style="height: 50px; width: 50px;" class="Vc" onclick="kkr16()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Chamika Karunaratne</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C74" value="Shivam Mavi" style="height: 50px; width: 50px;" class="Vc" onclick="kkr17()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Shivam Mavi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!-- wk -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C21" value="Sheldon Jackson" style="height: 50px; width: 50px;" class="Vc" onclick="kkr18()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Sheldon Jackson</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C22" value="Sam Billings" style="height: 50px; width: 50px;" class="Vc" onclick="kkr19()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Sam Billings</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                        <!-- all -->
+                                <div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C43" value="Andre Russell" style="height: 50px; width: 50px;" class="Vc" onclick="kkr20()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Andre Russell</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C44" value="Venkatesh Iyer" style="height: 50px; width: 50px;" class="Vc" onclick="kkr21()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Venkatesh Iyer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C45" value="Sunil Narine" style="height: 50px; width: 50px;" class="Vc" onclick="kkr22()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Sunil Narine</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C46" value="Anukul Roy" style="height: 50px; width: 50px;" class="Vc" onclick="kkr23()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Anukul Roy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container options" style="background: linear-gradient(rgb(71, 15, 134), rgb(71, 15, 134),rgb(71, 15, 134),gold); color: gold;">
+                                        <div class="row row-cols-2 mt-2">
+                                            <div class="col-3">
+                                                <input type="radio" name="VC" id="C47" value="Mohammad Nabi" style="height: 50px; width: 50px;" class="Vc" onclick="kkr24()">
+                                            </div>
+                                            <div class="col">
+                                                <p style="font-size: 25px;">Mohammad Nabi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- team selection end -->
+    </div>
+<hr><hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="fixed-bottom">
+    <div class="d-grid gap-2">
+        <button class="btn btn-block" id="go" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="margin: 10px; background-color:dodgerblue;" >
+            GO Ahead
+        </button>
+    </div>
+</div>
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+            OverView
+        </h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body small">
+        <center><h1>
+            WIN PREDICTION
+        </h1>
+            <input type="radio" class="btn-check" value="MI" name="prediction" id="success-outlined" autocomplete="off">
+        <label class="btn btn-outline-success" for="success-outlined">MI</label>
+        
+        <input type="radio" class="btn-check" value="KKR" name="prediction" id="danger-outlined" autocomplete="off">
+        <label class="btn btn-outline-danger" for="danger-outlined">KKR</label>
+        </center>
+<hr>
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+        </svg>
+        <div id="min_bat">
+
+        </div>
+        <div id="max_bat">
+
+        </div>
+        <div id="min_bowl">
+
+        </div>
+        <div id="max_bowl">
+
+        </div>
+        <div id="min_wk">
+
+        </div>
+        <div id="max_wk">
+
+        </div>
+        <div id="min_all">
+
+        </div>
+        <div id="max_all">
+
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Batsmen</td>
+                    <td><span id="BT">0</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Bowlers</td>
+                    <td><span id="BL">0</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>WK</td>
+                    <td><span id="WK">0</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>All rounders</td>
+                    <td><span id="AL">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+<div class="alert alert-danger d-flex align-items-center" id="ja_c" role="alert">
+    <svg class="bi flex-shrink-0 me-2"  id="mxbl"  width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <div>
+        Do not leave the site before an alert msg!
+    </div>
+</div>
+<div class="alert alert-danger d-flex align-items-center" id="ja_c" role="alert">
+    <svg class="bi flex-shrink-0 me-2"  id="mxbl"  width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <div>
+        If you don't get any alert after clicking done you may not have selected any captain or vice captain!
+    </div>
+</div>
+
+<center>
+        <div class="d-grid gap-2 " >
+            <button type="submit" name="submit" class="btnSubmit btn-block" value="Go Ahead"style="margin: 10px; background-color:aqua;  border-radius:10px;"/>
+                Done
+            </button>
+        </div>
+</center>
+
+    </div>
+</div>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+<!-- <script type="text/javascript">
+    function csk1(){
+        var csk1 = document.getElementById("csk1");
+        document.getElementById("csk1").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c1\" value=\"\" id=\"c1\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk2(){
+        var csk2 = document.getElementById("csk2");
+        document.getElementById("csk2").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c2\" value=\"\" id=\"c2\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk3(){
+        var csk3 = document.getElementById("csk3");
+        document.getElementById("csk3").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c3\" value=\"\" id=\"c3\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk4(){
+        var csk4 = document.getElementById("csk4");
+        document.getElementById("csk4").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c4\" value=\"\" id=\"c4\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk5(){
+        var csk5 = document.getElementById("csk5");
+        document.getElementById("csk5").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c5\" value=\"\" id=\"c5\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk6(){
+        var csk6 = document.getElementById("csk6");
+        document.getElementById("csk6").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c6\" value=\"\" id=\"c6\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk7(){
+        var csk7 = document.getElementById("csk7");
+        document.getElementById("csk7").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c7\" value=\"\" id=\"c7\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk8(){
+        var csk8 = document.getElementById("csk8");
+        document.getElementById("csk8").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c8\" value=\"\" id=\"c8\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk9(){
+        var csk9 = document.getElementById("csk9");
+        document.getElementById("csk9").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c9\" value=\"\" id=\"c9\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk10(){
+        var csk10 = document.getElementById("csk10");
+        document.getElementById("csk10").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c10\" value=\"\" id=\"c10\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk11(){
+        var csk11 = document.getElementById("csk11");
+        document.getElementById("csk11").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c11\" value=\"\" id=\"c11\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk12(){
+        var csk12 = document.getElementById("csk12");
+        document.getElementById("csk12").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c12\" value=\"\" id=\"c12\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk13(){
+        var csk13 = document.getElementById("csk13");
+        document.getElementById("csk13").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c13\" value=\"\" id=\"c13\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk14(){
+        var csk14 = document.getElementById("csk14");
+        document.getElementById("csk14").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c14\" value=\"\" id=\"c14\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk15(){
+        var csk15 = document.getElementById("csk15");
+        document.getElementById("csk15").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c15\" value=\"\" id=\"c15\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk16(){
+        var csk16 = document.getElementById("csk16");
+        document.getElementById("csk16").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c16\" value=\"\" id=\"c16\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk17(){
+        var csk17 = document.getElementById("csk17");
+        document.getElementById("csk17").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c17\" value=\"\" id=\"c17\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk18(){
+        var csk18 = document.getElementById("csk18");
+        document.getElementById("csk18").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c18\" value=\"\" id=\"c18\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk19(){
+        var csk19 = document.getElementById("csk19");
+        document.getElementById("csk19").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c19\" value=\"\" id=\"c19\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk20(){
+        var csk20 = document.getElementById("csk20");
+        document.getElementById("csk20").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c20\" value=\"\" id=\"c20\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk21(){
+        var csk21 = document.getElementById("csk21");
+        document.getElementById("csk21").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c21\" value=\"\" id=\"c21\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk22(){
+        var csk22 = document.getElementById("csk22");
+        document.getElementById("csk22").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c22\" value=\"\" id=\"c22\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk23(){
+        var csk23 = document.getElementById("csk23");
+        document.getElementById("csk23").innerHTML += "<div class=\"row row-cols-2 mt-2\"><div class=\"col-3\"><input type=\"checkbox\" name=\"c23\" value=\"\" id=\"c23\" style=\"height: 50px; width: 50px;\"></div><div class=\"col\"><p style=\"font-size: 25px;\"></p></div></div>";
+    }
+    function csk24(){
+        var csk24 = document.getElementById("csk24");
+        
+    }
+
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var checkBT = document.querySelectorAll('.bat');
+    var countBT = 0;
+    for (var bat of checkBT){
+        bat.checked = this.checked;
+    }
+    for(var i = 0; i < checkBT.length; i++){
+        checkBT[i].addEventListener('click', function() {
+        
+            if (this.checked == true){
+                countBT++;
+                if (countBT<3){
+                    var element = document.getElementById("selected_bat");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mxb').remove();
+                    $('#mxb').remove();
+                    $('#mxb').remove();
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    document.getElementById("min_bat").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mnb\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected less batsmen</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countBT>6){
+                    var element = document.getElementById("selected_bat");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    $('#mxb').remove();
+                    document.getElementById("max_bat").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxb\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more batsmen</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_bat");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+            } else{
+                countBT--;
+                if (countBT<3){
+                    var element = document.getElementById("selected_bat");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mxb').remove();
+                    $('#mxb').remove();
+                    $('#mxb').remove();
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    document.getElementById("min_bat").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mnb\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected less batsmen</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countBT>6){
+                    var element = document.getElementById("selected_bat");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    $('#mxb').remove();
+                    document.getElementById("max_bat").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxb\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more batsmen</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_bat");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    $('#mnb').remove();
+                    $('#mxb').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+            }
+            document.getElementById('selected_bat').innerHTML = countBT;
+            document.getElementById('BT').innerHTML = countBT;
+            if(countBT>6){
+                alert("Max Batsmen is 6 !!")
+
+                }
+            document.getElementById('player').innerHTML = countBT + countAL + countBL + countWK;
+
+            
+        })
+    }
+
+
+
+
+
+
+
+
+
+    var checkBL = document.querySelectorAll('.bowl');
+    var countBL = 0;
+    for (var bowl of checkBL){
+        bowl.checked = this.checked;
+    }
+    for(var i = 0; i < checkBL.length; i++){
+        checkBL[i].addEventListener('click', function() {
+            if (this.checked == true){
+                countBL++;
+                if (countBL<3){
+                    var element = document.getElementById("selected_bowl");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    document.getElementById("min_bowl").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mnbl\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected less bowlers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countBL>4){
+                    var element = document.getElementById("selected_bowl");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    document.getElementById("max_bowl").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxbl\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more bowlers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_bowl");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+            } else{
+                countBL--;
+                if (countBL<3){
+                    var element = document.getElementById("selected_bowl");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    document.getElementById("min_bowl").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mnbl\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected less bowlers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countBL>4){
+                    var element = document.getElementById("selected_bowl");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    document.getElementById("max_bowl").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxbl\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more bowlers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_bowl");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnbl').remove();
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    $('#mxbl').remove();
+                    $('#mnbl').remove();
+                    $('#mxbl').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+            }
+            document.getElementById('selected_bowl').innerHTML = countBL;
+            document.getElementById('BL').innerHTML = countBL;
+            if(countBL>4){
+                alert("Max Bowlers is 4 !!")
+            }
+            document.getElementById('player').innerHTML = countBT + countAL + countBL + countWK;
+        })
+    }
+
+
+
+
+
+
+
+
+
+    var checkWK = document.querySelectorAll('.wk');
+    var countWK = 0;
+    for (var wk of checkWK){
+        wk.checked = this.checked;
+    }
+    for(var i = 0; i < checkWK.length; i++){
+        checkWK[i].addEventListener('click', function() {
+            if (this.checked == true){
+                countWK++;
+                if (countWK>4){
+                    var element = document.getElementById("selected_wk");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mnwk').remove();
+                    document.getElementById("max_wk").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxwk\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more wicket keepers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countWK==0){
+                    var element = document.getElementById("selected_wk");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mnwk').remove();
+                    document.getElementById("min_wk").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mnwk\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected less wicket keepers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_wk");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+            } else{
+                countWK--;
+                if (countWK>4){
+                    var element = document.getElementById("selected_wk");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    document.getElementById("max_wk").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxwk\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more wicket keepers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countWK==0){
+                    var element = document.getElementById("selected_wk");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    document.getElementById("max_wk").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxwk\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more wicket keepers</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_wk");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mnwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    $('#mxwk').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+            }
+            document.getElementById('selected_wk').innerHTML = countWK;
+            document.getElementById('WK').innerHTML = countWK;
+            if(countWK>4){
+                alert("Max WK is 4 !!")
+            }
+            document.getElementById('player').innerHTML = countBT + countAL + countBL + countWK;
+        })
+    }
+
+
+
+
+
+
+
+
+
+    var checkAL = document.querySelectorAll('.all');
+    var countAL = 0;
+    for (var bat of checkAL){
+        bat.checked = this.checked;
+    }
+    for(var i = 0; i < checkAL.length; i++){
+        checkAL[i].addEventListener('click', function() {
+            if (this.checked == true){
+                countAL++;
+                if (countAL>4){
+                    var element = document.getElementById("selected_all");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    document.getElementById("max_all").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxal\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more all rounders</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countAL==0){
+                    var element = document.getElementById("selected_all");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    document.getElementById("min_all").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mnal\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected less all rounders</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_all");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+            } else{
+                countAL--;
+                if (countAL>4){
+                    var element = document.getElementById("selected_all");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    document.getElementById("max_bat").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mxal\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected more all rounders</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+
+                else if (countAL==0){
+                    var element = document.getElementById("selected_all");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-danger");
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    document.getElementById("min_all").innerHTML += "<div class=\"alert alert-danger d-flex align-items-center\" id=\"mnal\" role=\"alert\"><svg class=\"bi flex-shrink-0 me-2\" width=\"24\" height=\"24\" role=\"img\" aria-label=\"Danger:\"><use xlink:href=\"#exclamation-triangle-fill\"/></svg><div>You have selected less all rounders</div></div>";
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+                else{
+                    var element = document.getElementById("selected_all");
+                    element.classList.remove("badge", "bg-danger","bg-success");
+                    element.classList.add("badge", "bg-success");
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mnal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    $('#mxal').remove();
+                    if(countBT + countAL + countBL + countWK==11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger");
+                        p.classList.add("btn","bg-success")
+                    }
+                    else if(countBT + countAL + countBL + countWK<11){
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                    else if(countBT + countAL + countBL + countWK>11){
+                        alert("Team should have only 11 players!")
+                        var p = document.getElementById("tot")
+                        p.classList.remove("btn", "bg-danger","bg-success");
+                        p.classList.add("btn","bg-danger")
+                    }
+                }
+            }
+            document.getElementById('selected_all').innerHTML = countAL;
+            document.getElementById('AL').innerHTML = countAL;
+            if(countAL>4){
+                alert("Max ALL ROUNDERS is 4 !!")
+            }
+            document.getElementById('player').innerHTML = countBT + countAL + countBL + countWK;
+        })
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxeEvXaIUX5IjOl3kYmb07FoJpnxOpREGE22eMqrHWvukpjoM867SCxcekyItpTw94F/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Done!"))
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -212,6 +212,72 @@
             </div>
         </div>
 
+        <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,red,skyblue,skyblue,red);color: gold;text-shadow: 1px 1px blue;border-radius: 7px;">
+                    LSG Vs RCB
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 19
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="LR" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: gold; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh14.html" id="link_LR" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div>
+<!-- 
+        <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,red,skyblue,skyblue,red);color: gold;text-shadow: 1px 1px blue;border-radius: 7px;">
+                    MI Vs CSK
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 33
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="MC" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: gold; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh33.html" id="link_MC" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 8em;">
+            <center>
+                <h1 style="border: 1px solid;padding: 0.5em;background: linear-gradient(to right,red,skyblue,skyblue,red);color: gold;text-shadow: 1px 1px blue;border-radius: 7px;">
+                    MI Vs CSK
+                </h1>
+            </center>
+            <div class="card-body">
+                <h5 class="card-title">
+                    MATCH 59
+                </h5>
+                <p class="card-text">
+                    7:30 PM
+                    <p id="MC2" style="font-size: 30px; background: linear-gradient(to right,black,blue,black); text-align: center; color: gold; border-radius: 10px;"></p>
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="matches/mh59.html" id="link_MC2" class="btn btn-primary">
+                        Make Team For This Match
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
 
 
 
@@ -434,6 +500,100 @@
                 clearInterval(x);
                 document.getElementById("CS").innerHTML = "STARTED";
                 document.getElementById("link_CS").remove()
+
+              }
+            }, 1000);
+            // -----------------------------------
+            // ----------------------------------------
+            // Set the date we're counting down to
+            var countDownDate8 = new Date("April 19, 2022 19:30:00").getTime();
+            
+            // Update the count down every 1 second
+            var x8 = setInterval(function() {
+            
+              // Get today's date and time
+              var now8 = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance8 = countDownDate8 - now8;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days8 = Math.floor(distance8 / (1000 * 60 * 60 * 24));
+              var hours8 = Math.floor((distance8 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes8 = Math.floor((distance8 % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds8 = Math.floor((distance8 % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("LR").innerHTML = days8 + "d " + hours8 + "h "
+              + minutes8 + "m " + seconds8 + "s ";
+            
+              // If the count down is finished, write some text
+              if (distance8 < 0) {
+                clearInterval(x);
+                document.getElementById("LR").innerHTML = "STARTED";
+                document.getElementById("link_LR").remove()
+
+              }
+            }, 1000);
+            // -------------CSK MI 33----------------
+            // Set the date we're counting down to
+            var countDownDate33 = new Date("April 21, 2022 19:30:00").getTime();
+            
+            // Update the count down every 1 second
+            var x33 = setInterval(function() {
+            
+              // Get today's date and time
+              var now33 = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance33 = countDownDate33 - now33;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days33 = Math.floor(distance33 / (1000 * 60 * 60 * 24));
+              var hours33 = Math.floor((distance33 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes33 = Math.floor((distance33 % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds33 = Math.floor((distance33 % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("MC").innerHTML = days33 + "d " + hours33 + "h "
+              + minutes33 + "m " + seconds33 + "s ";
+            
+              // If the count down is finished, write some text
+              if (distance33 < 0) {
+                clearInterval(x);
+                document.getElementById("MC").innerHTML = "STARTED";
+                document.getElementById("link_MC").remove()
+
+              }
+            }, 1000);
+            // -------------CSK MI 59----------------
+            // Set the date we're counting down to
+            var countDownDate59 = new Date("May 12, 2022 19:30:00").getTime();
+            
+            // Update the count down every 1 second
+            var x59 = setInterval(function() {
+            
+              // Get today's date and time
+              var now59 = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance59 = countDownDate59 - now59;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days59 = Math.floor(distance59 / (1000 * 60 * 60 * 24));
+              var hours59 = Math.floor((distance59 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes59 = Math.floor((distance59 % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds59 = Math.floor((distance59 % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("MC2").innerHTML = days59 + "d " + hours59 + "h "
+              + minutes59 + "m " + seconds59 + "s ";
+            
+              // If the count down is finished, write some text
+              if (distance59 < 0) {
+                clearInterval(x);
+                document.getElementById("MC2").innerHTML = "STARTED";
+                document.getElementById("link_MC2").remove()
 
               }
             }, 1000);
